@@ -17,6 +17,8 @@ public class Javai {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // METODOS DOS EXERCICIOS
+        
         //um();
         //dois();
         //tres();
@@ -139,20 +141,30 @@ public class Javai {
     }
     
     public static void cinco() {
+        float[] premios = {500, 400, 300, 200, 100};
         Scanner leitor = new Scanner (System.in);
         System.out.println("Digite quantos minutos extras:");
         int HorasExtras = leitor.nextInt();
         System.out.println("Digite quantos minutos faltados:");
         int FaltaHoras = leitor.nextInt();
+        // HorasExtras - ((2/3) * FaltaHoras);
+        int result = HorasExtras - FaltaHoras * 2 / 3;
+        System.out.println ("Horas Extras: " + ToHour(HorasExtras));
+        System.out.println ("Horas Falta: " + ToHour(FaltaHoras));
+        System.out.print ("Premio : R$");
         
-        int result = (HorasExtras) -(2/3 * (FaltaHoras));
-        System.out.println (result);
-        ToHour(result);
+        if(result > 2400) System.out.print (premios[0]);
+        else if(result > 1801) System.out.print (premios[1]);
+        else if(result > 1201) System.out.print (premios[2]);
+        else if(result > 600) System.out.print (premios[3]);
+        else System.out.print (premios[4]);
+        
+        
     }
-    public static float ToHour(int min) {
+    public static float ToHour(float min) {
         float result = 0;
         
-        System.out.println("sdasd " + min / 60);
+        result = min / 60;
         return result;
         
     }
