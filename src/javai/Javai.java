@@ -17,7 +17,11 @@ public class Javai {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        um();
+        //um();
+        //dois();
+        //tres();
+        //quatro();
+        cinco();
     }
     public static void extenso(String a, int b){
 		// O valor do parametro 'a' é a coluna, o 'b' é a linha  ( eu posso ter invertido linha com coluna )
@@ -121,6 +125,36 @@ public class Javai {
             i++;
         }
         System.out.println(result);
+    }
+    public static void quatro(){
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Digite o horário de entrada");
+        int horas = leitor.nextInt();
+        for(int h = 0; h < 6; h++){
+            horas++;
+            if(horas > 23) horas = 0;
+        }
+        System.out.println(horas >= 12 ? horas + " PM" : horas + " AM");
+        
+    }
+    
+    public static void cinco() {
+        Scanner leitor = new Scanner (System.in);
+        System.out.println("Digite quantos minutos extras:");
+        int HorasExtras = leitor.nextInt();
+        System.out.println("Digite quantos minutos faltados:");
+        int FaltaHoras = leitor.nextInt();
+        
+        int result = (HorasExtras) -(2/3 * (FaltaHoras));
+        System.out.println (result);
+        ToHour(result);
+    }
+    public static float ToHour(int min) {
+        float result = 0;
+        
+        System.out.println("sdasd " + min / 60);
+        return result;
+        
     }
 }
    
